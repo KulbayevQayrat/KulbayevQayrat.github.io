@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="scss/main.scss">
+</head>
+<body>
+
+<section class="reg review">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>отзыв</h2>
+            </div>
+            <div class="col-12 offset-0 offset-sm-0 col-lg-6 offset-lg-3">
+                <div class="review__form login-box">
+                    <form action="#">
+                        <label for="input__file">Ваше видео</label>
+                        <div class="input__wrapper">
+                            <input type="file" name="file" id="input__file" class="input input__file" accept=".mp4" multiple>
+                            <label for="input__file" class="input__file-button">
+                                <span class="input__file-icon-wrapper">
+                                    <img class="input__file-icon" src="https://smartlanding.biz/demo/fileinput/img/add.svg" alt="Выбрать файл" width="25">
+                                </span>
+                                <span class="input__file-button-text">Выберите файл</span>
+                            </label>
+                        </div>
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" >
+                        <div class="form-group">
+                            <label for="comment">Что ты выиграла</label>
+                            <input type="text" id="comment" >
+<!--                            <textarea class="form-control" rows="5" id="comment"></textarea>-->
+                        </div>
+                        <button type="submit" class="btn">Представить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    let input = document.querySelector( '.input__file' );
+    let infoArea = document.querySelector( '.input__file-button-text' );
+
+    input.addEventListener( 'change', showFileName );
+
+    function showFileName( event ) {
+        let input = event.srcElement;
+        infoArea.textContent = input.files[0].name;
+    }
+</script>
+
+</body>
+</html>

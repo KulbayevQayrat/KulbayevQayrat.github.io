@@ -81,6 +81,12 @@
 .home__wrapper .home__content {
   padding: 2rem 0;
 }
+.home__wrapper .home__content .icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
 .home__wrapper .home__content .video {
   width: 100%;
   display: flex;
